@@ -1,6 +1,6 @@
-// Writes the sample PDFs to disk using the same generator embedded in ../pdf-editor.html
+// Writes the sample PDFs to disk using the same generator embedded in ../index.html
 const fs = require('fs'), path = require('path');
-const html = fs.readFileSync(path.join(__dirname, '..', 'pdf-editor.html'), 'utf8');
+const html = fs.readFileSync(path.join(__dirname, '..', 'index.html'), 'utf8');
 const m = /<script id="samplegen">([\s\S]*?)<\/script>/.exec(html);
 const { makeSample, SAMPLES } = new Function(m[1] + '\nreturn { makeSample, SAMPLES };')();
 for (const s of SAMPLES) {
