@@ -203,6 +203,10 @@ body.empty #toolbar,body.empty #ctx,body.empty .needdoc{opacity:.3;pointer-event
 @media(max-width:900px){#zoomgrp,#docname{display:none}#hint{display:none}}
 @media(max-width:760px){#side{position:absolute;z-index:15;height:100%}#navgrp{display:none}}
 </style>
+<script>/* no right-click, view-source (Ctrl+U) or dev tools (Ctrl+Shift+I) */
+document.addEventListener('contextmenu',function(e){e.preventDefault();});
+document.addEventListener('keydown',function(e){var k=(e.key||'').toLowerCase();if((e.ctrlKey||e.metaKey)&&(k==='u'||(e.shiftKey&&k==='i')))e.preventDefault();},true);
+</script>
 </head>
 <body class="empty">
 <div id="app">
