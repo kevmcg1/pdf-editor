@@ -47,7 +47,7 @@ i{pointer-events:none}
 .sep{width:1px;height:20px;background:var(--line);margin:0 6px;flex:none}
 
 /* ---------- layout ---------- */
-#app{display:grid;grid-template-rows:52px 48px auto 1fr;height:100%}
+#app{display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:52px 48px auto 1fr;height:100%}   /* minmax(0,…): a zoomed-in page must scroll inside the viewer, not stretch the top bar past the window */
 #top,#toolbar,#ctx{display:flex;align-items:center;gap:4px;padding:0 12px;background:var(--panel);border-bottom:1px solid var(--line)}
 #top{gap:6px;position:relative;z-index:20}
 .brand{display:flex;align-items:center;gap:10px;font-weight:600;font-size:14px;letter-spacing:-.01em;margin-right:6px}
